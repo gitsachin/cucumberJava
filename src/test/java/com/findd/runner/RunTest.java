@@ -5,12 +5,13 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(strict = false, features = "datafile/Employee.feature", glue = "com.findd.steps", format = { "pretty",
+@CucumberOptions(strict = false, features = "datafile\\Regression\\Refresh.feature", glue = "com.findd.steps", format = { "pretty",
         "html:target/site/cucumber-pretty",
-        "json:target/cucumber.json" }
-//		, tags = { "@Login_001"}
+        "json:target/cucumber.json"}
+		, tags = { "~@Dev",} //To exclude dev
 )
+
 
 public class RunTest {
 
-}
+} 
